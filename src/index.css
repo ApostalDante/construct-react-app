@@ -1,0 +1,15 @@
+@import url("../src/vendor/null-style.css");
+@import url("./vendor/fonts/fonts.css");
+
+.page {
+  font-family: "OpenSans", Arial, sans-serif;
+  max-width: 1460px;
+  min-width: 310px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}

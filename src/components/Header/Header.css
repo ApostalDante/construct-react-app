@@ -1,0 +1,76 @@
+.header {
+  background-image: url("../../images/header-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 41px 0 71px;
+  text-align: center;
+  color: #fff;
+}
+.header__logo {
+  width: 101.618px;
+  height: 23px;
+}
+.header__title {
+  font-family: "BebasNeueBold";
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 5.1px;
+  font-size: 60px;
+  text-transform: uppercase;
+  padding-top: 307px;
+}
+.header__description {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: normal;
+  padding-bottom: 221px;
+  margin-top: -4px;
+}
+.header__link {
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.7px;
+  transition: opacity 0.3s linear;
+}
+.header__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 31px 0 51px;
+  }
+  .header__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__title {
+    padding-top: 297px;
+    font-size: 30px;
+  }
+  .header__description {
+    font-size: 12px;
+    padding-bottom: 222px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__title {
+    padding-top: 297px;
+    font-size: 20px;
+  }
+  .header__description {
+    font-size: 10px;
+    padding-bottom: 232px;
+  }
+  .header__link {
+    font-size: 9px;
+  }
+}

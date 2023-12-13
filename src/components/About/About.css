@@ -1,0 +1,117 @@
+.about {
+  font-family: "OpenSans";
+  margin: 56px auto;
+  max-width: 941px;
+}
+
+.about__article {
+  text-align: center;
+}
+.about__title {
+  color: #48555b;
+  /* text-align: center;*/
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.306px;
+}
+.about__border {
+  display: block;
+  padding-top: 10px;
+  width: 53px;
+  border-bottom: 2px solid #00a4e5;
+
+  display: block;
+  margin: 0 auto;
+}
+.about__row {
+  margin-top: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+.about__description {
+  max-width: 404px;
+}
+.about__title-description {
+  color: #48555b;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.188px;
+}
+.about__span {
+  color: #16ace8;
+}
+.about__subtitle-description {
+  color: #48555b;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 176.923% */
+  letter-spacing: 0.188px;
+  margin-top: 30px;
+}
+.about__slides {
+  display: flex;
+  align-items: flex-end;
+  gap: 0 20px;
+  margin-bottom: -2px;
+}
+
+.about__button {
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0.188px;
+  text-align: left;
+  /* padding: 14px 0 0 18px;*/
+}
+.about__slides-item_plan {
+  background-image: url("../../images/PLAN.svg");
+}
+.about__slides-item_manage {
+  background-image: url("../../images/manage.svg");
+}
+.about__slides-item_deliver {
+  background-image: url("../../images/deliver.svg");
+}
+
+.about__slides-item {
+  width: 140px;
+  height: 224px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  list-style: none;
+  padding: 14px 0 0 18px;
+}
+
+.swiper {
+  /* width: 100%;
+  height: 100%;*/
+  width: 20%;
+  height: 10%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

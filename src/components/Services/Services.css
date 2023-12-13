@@ -1,0 +1,114 @@
+.services {
+  padding: 0 15px 115px;
+  font-family: "OpenSans";
+  margin-top: 120px;
+}
+.services__row {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.services__description {
+  display: flex;
+  justify-content: space-between;
+}
+.services__article {
+}
+.services__title {
+  color: #48555b;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.306px;
+  min-width: 199px;
+  max-width: 200px;
+}
+.services__border {
+  display: block;
+  padding-top: 10px;
+  width: 50px;
+  border-bottom: 2px solid #00a4e5;
+}
+.services__text {
+  margin-left: 13%;
+  max-width: 405px;
+  color: #48555b;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+}
+.services__button {
+  width: 150px;
+  height: 40px;
+  background: #00a4e5;
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.services__cards {
+  margin-top: 78px;
+  display: flex;
+  justify-content: space-between;
+}
+.services__card {
+  width: 295px;
+  border: 1px solid #e6e6e6;
+  color: #48555b;
+  padding: 0 22px 0 23px;
+}
+.services__img {
+  width: 65px;
+  height: 75px;
+  margin-top: 38px;
+}
+.services__subtitle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.427px;
+  margin-top: 25px;
+}
+.services__textCard {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.188px;
+  margin: 13px 0 39px;
+}
+
+@media screen and (max-width: 925px) {
+  .services__text {
+    margin-left: 0;
+  }
+  .services__cards {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .services__description {
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  .services__article {
+    width: 100%;
+    margin-left: 35%;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .services__description {
+    justify-content: center;
+  }
+  .services__article {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
