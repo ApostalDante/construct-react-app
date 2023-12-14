@@ -1,29 +1,43 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
-
-
-// Import Swiper styles
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import './About.css';
 
-//import "./styles.css";
 
 function About() {
-
   const [clientWidth, setClientWidth] = useState(document.documentElement.clientWidth);
 
-  // const slidePlan = <button type="button" className="about__button about__button_plan" disabled={true}>WE PLAN</button>
-  const slidePlan = <li className="about__slides-item about__slides-item_plan">
+
+  const slidePlan = <div className="about__slides-item about__slides-item_plan">
     <button type="button" className="about__button" disabled={true}>WE<br />PLAN</button>
-  </li>
-  //const slideManage = <button type="button" className="about__button">WE MANAGE</button>
-  const slideManage = <li className="about__slides-item about__slides-item_manage">
+  </div>
+  const slideManage = <div className="about__slides-item about__slides-item_manage">
     <button type="button" className="about__button" disabled={true}>WE<br />MANAGE</button>
-  </li>
-  //const slideDeliver = <button type="button" className="about__button about__button_plan">WE BUILD</button>
-  const slideDeliver = <li className="about__slides-item about__slides-item_deliver">
+  </div>
+  const slideDeliver = <div className="about__slides-item about__slides-item_deliver">
     <button type="button" className="about__button" disabled={true}>WE<br />BUILD</button>
-  </li>
+  </div>
+
+  const slider = clientWidth <= 483 ?
+    <Swiper
+      className="mySwiper"
+      loop>
+      <SwiperSlide>{slidePlan}</SwiperSlide>
+      <SwiperSlide>{slideManage}</SwiperSlide>
+      <SwiperSlide>{slideDeliver}</SwiperSlide>
+    </Swiper> :
+    <div className="about__slides"> {slidePlan} {slideManage} {slideDeliver}</div>;
+
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setClientWidth(document.documentElement.clientWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section className="about">
@@ -41,29 +55,10 @@ function About() {
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
           </p>
         </div>
-        <div className="about__slides">
-          {slidePlan}
-          {slideManage}
-          {slideDeliver}
-        </div>
+        {slider}
       </div>
     </section>
   );
 }
 
 export default About;
-
-
-/*
-export default function App() {
-  return (
-    <>
-      <Swiper className="mySwiper">
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
-*/

@@ -12,7 +12,7 @@ function Footer() {
   const [showLinks, setShowLinks] = React.useState(false);
   const [showContacts, setShowContacts] = React.useState(false);
 
-  const linkElement = clientWidth <= 589 ? <h2 className='footer__title' onClick={handleShowLinks}>LINKS</h2> :
+  const linkElement = clientWidth <= 620 ? <h2 className='footer__title' onClick={handleShowLinks}>LINKS</h2> :
     <h2 className='footer__title'>LINKS</h2>;
   const contactElement = clientWidth <= 400 ? <h2 className='footer__title' onClick={handleContacts}>CONTACT US</h2> :
     <h2 className='footer__title'>CONTACT US</h2>;
