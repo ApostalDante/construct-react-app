@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import './About.css';
-
+import { Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
 
 function About() {
   const [clientWidth, setClientWidth] = useState(document.documentElement.clientWidth);
@@ -21,7 +22,12 @@ function About() {
   const slider = clientWidth <= 483 ?
     <Swiper
       className="mySwiper"
-      loop>
+      modules={[Navigation]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      loop
+    >
       <SwiperSlide>{slidePlan}</SwiperSlide>
       <SwiperSlide>{slideManage}</SwiperSlide>
       <SwiperSlide>{slideDeliver}</SwiperSlide>

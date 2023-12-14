@@ -10,6 +10,7 @@
 }
 .popup_opened {
   display: flex;
+  z-index: 5;
 }
 .popup__container {
   width: 100%;
