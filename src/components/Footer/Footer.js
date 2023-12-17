@@ -1,5 +1,6 @@
 import './Footer.css';
 import React, { useEffect, useState } from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 import FooterLogo from '../../images/footer-logo.svg';
 import facebook from '../../images/fb.svg';
 import twitter from '../../images/tw.svg';
@@ -53,23 +54,23 @@ function Footer() {
         <div className={`footer__links ${showLinks ? 'footer__links_absolute' : ''}`}>
           {linkElement}
           <ul className={`footer__links-list ${showLinks ? 'footer__links-list_visible' : ''}`}>
-            <li className='footer__link-item'><a className="footer__link" href="#header" >HOME</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >ABOUT</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >SERVICES</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >PROJECTS</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >CONTACT US</a></li>
+            <li className='footer__link-item'><Link className='footer__link' to="header" smooth={true} duration={1500}>HOME</Link></li>
+            <li className='footer__link-item'><Link className='footer__link' to="about" smooth={true} duration={1300} offset={-10}>ABOUT</Link></li>
+            <li className='footer__link-item'><Link className='footer__link' to="services" smooth={true} duration={1000} offset={-20}>SERVICES</Link></li>
+            <li className='footer__link-item'><Link className='footer__link' to="project" smooth={true} duration={1000} offset={-20}>PROJECTS</Link></li>
+            <li className='footer__link-item'><Link className='footer__link' to="footer-contacts" smooth={true} duration={100}>CONTACT US</Link></li>
           </ul>
 
           <ul className={`footer__links-list ${showLinks ? 'footer__links-list_visible' : ''}`}>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >FAQ</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >TERMS</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >CAREERS</a></li>
+            <li className='footer__link-item'><a className="footer__link" href="##">FAQ</a></li>
+            <li className='footer__link-item'><a className="footer__link" href="##">TERMS</a></li>
+            <li className='footer__link-item'><a className="footer__link" href="##">CAREERS</a></li>
           </ul>
 
           <ul className={`footer__links-list ${showLinks ? 'footer__links-list_visible' : ''}`}>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >BLOG</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >PARTNERS</a></li>
-            <li className='footer__link-item'><a className="footer__link" href="#about-project" >NEWS</a></li>
+            <li className='footer__link-item'><a className="footer__link" href="##">BLOG</a></li>
+            <li className='footer__link-item'><a className="footer__link" href="##">PARTNERS</a></li>
+            <li className='footer__link-item'><a className="footer__link" href="##">NEWS</a></li>
           </ul>
         </div>
 

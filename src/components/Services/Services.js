@@ -10,7 +10,7 @@ function Services({ openPopup }) {
   };
 
   return (
-    <section className="services">
+    <section className="services" id='services'>
       <div className="services__row">
         <div className="services__description">
           <article className="services__article">

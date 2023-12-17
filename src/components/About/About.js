@@ -46,12 +46,12 @@ function About() {
   }, []);
 
   return (
-    <section className="about">
+    <section className="about" id='about'>
       <article className="about__article">
         <h2 className="about__title">OUR STORY</h2>
         <span className="about__border" />
       </article>
-      <div className="about__row">
+      <div className="about__row" id='project'>
         <div className="about__description">
           <p className="about__title-description">
             Founded in 2011 by John Mathew Smith, <span className="about__span">Konstruct</span> has become the number one construction management firm

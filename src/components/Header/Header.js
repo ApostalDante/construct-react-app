@@ -1,5 +1,6 @@
 import './Header.css';
 import HeaderLogo from '../../images/header-logo.svg';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header() {
 
@@ -10,7 +11,7 @@ function Header() {
         src={HeaderLogo} />
       <h1 className='header__title'>PARTNER WITH KONSTUCT</h1>
       <p className='header__description'>An award-winning construction management firm</p>
-      <a className="header__link" href="#about-project" >SCROLL DOWN</a>
+      <Link className='header__link' to="navbar" smooth={true} duration={1000}>SCROLL DOWN</Link>
     </header>
   );
 };

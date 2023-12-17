@@ -37,6 +37,7 @@
   color: #00a4e5;
   font-weight: 700;
   padding: 0px;
+  cursor: pointer;
 }
 .navbar__button {
   display: none;

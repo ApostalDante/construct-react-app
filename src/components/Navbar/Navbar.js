@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import useClickOutside from '../useClickOutside/useClickOutside';
 import NavbarLogo from '../../images/konstruct.svg';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 function Navbar() {
@@ -11,6 +12,7 @@ function Navbar() {
   const page = document.querySelector('.page');
 
   function toggleBurger() {
+    if (!nav) scroll.scrollTo(690);
     setNav(!nav);
     page.classList.toggle('page_hidden');
   }
@@ -23,25 +25,25 @@ function Navbar() {
   };
 
   return (
-    <section className='navbar'>
+    <section className='navbar' id='navbar'>
       <div className='navbar__container'>
         <nav className='navbar__nav'>
           <img className='navbar__logo' src={NavbarLogo} alt='Logo' />
           <ul className={`navbar__menu ${nav ? 'navbar__menu_active' : ''}`} ref={menuRef}>
             <li>
-              <a onClick={closeBurger} className='navbar__link' href='##'>HOME</a>
+              <Link className='navbar__link' to="header" smooth={true} duration={500} onClick={closeBurger}>HOME</Link>
             </li>
             <li>
-              <a onClick={closeBurger} className='navbar__link' href='##'>ABOUT</a>
+              <Link className='navbar__link' to="about" smooth={true} duration={500} offset={-10} onClick={closeBurger}>ABOUT</Link>
             </li>
             <li>
-              <a onClick={closeBurger} className='navbar__link' href='##'>SERVICES</a>
+              <Link className='navbar__link' to="services" smooth={true} duration={1000} offset={-20} onClick={closeBurger}>SERVICES</Link>
             </li>
             <li>
-              <a onClick={closeBurger} className='navbar__link' href='##'>WORK</a>
+              <Link className='navbar__link' to="getInTouch" smooth={true} duration={1300} onClick={closeBurger}>WORK</Link>
             </li>
             <li>
-              <a onClick={closeBurger} className='navbar__link' href='#footer-contacts'>CONTACT</a>
+              <Link className='navbar__link' to="footer-contacts" smooth={true} duration={1500} onClick={closeBurger}>CONTACT</Link>
             </li>
           </ul>
           <div onClick={toggleBurger} className='navbar__button'>
