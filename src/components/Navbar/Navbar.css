@@ -56,11 +56,11 @@
     height: 100vh;
     background-color: #f8f8f8;
     z-index: 10;
-    transition: left 1s;
+    transition: left 2s;
     gap: 45px 0;
   }
   .navbar__menu_active {
-    left: 0;
+    left: -13%;
   }
   .navbar__link {
     font-size: 32px;
