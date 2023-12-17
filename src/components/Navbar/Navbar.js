@@ -1,6 +1,6 @@
 import './Navbar.css';
 import React, { useState, useRef } from 'react';
-import useClickOutside from '../useClickOutside';
+import useClickOutside from '../useClickOutside/useClickOutside';
 import NavbarLogo from '../../images/konstruct.svg';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
